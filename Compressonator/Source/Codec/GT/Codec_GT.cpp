@@ -29,8 +29,8 @@
 #ifdef _MSC_VER
 #pragma warning(disable:4100)    // Ignore warnings of unreferenced formal parameters
 #endif //_MSC_VER
-#include "Common.h"
 #include "Codec_GT.h"
+#include "Common.h"
 
 #include <chrono>
 
@@ -67,7 +67,7 @@ unsigned int GTThreadProcEncode(void* param)
             tp->run = FALSE;
         }
 
-        using namespace chrono;
+        using namespace std::chrono_literals;
 
         std::this_thread::sleep_for( 0ms );
     }
@@ -388,7 +388,7 @@ if (m_Use_MultiThreading)
         // its work from the producer
         while(g_EncodeParameterStorage[i].run == TRUE)
         {
-            using namespace chrono;
+            using namespace std::chrono_literals;
 
             std::this_thread::sleep_for( 1ms );
         }

@@ -29,9 +29,9 @@
 #ifdef _MSC_VER
 #pragma warning(disable:4100)    // Ignore warnings of unreferenced formal parameters
 #endif //_MSC_VER
-#include "Common.h"
 #include "Codec_BC7.h"
 #include "BC7_Library.h"
+#include "Common.h"
 #include <chrono>
 
 #ifdef BC7_COMPDEBUGGER
@@ -64,7 +64,7 @@ unsigned int BC7ThreadProcEncode(void* param)
             tp->run = FALSE;
         }
 
-        using namespace chrono;
+        using namespace std::chrono_literals;
 
         std::this_thread::sleep_for(0ms);
     }
@@ -455,7 +455,7 @@ if (m_Use_MultiThreading)
     // Wait for all the live threads to finish any current work
     for (DWORD i = 0; i < m_LiveThreads; i++)
     {
-        using namespace chrono;
+        using namespace std::chrono_literals;
 
         // If a thread is in the running state then we need to wait for it to finish
         // its work from the producer

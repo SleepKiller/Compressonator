@@ -24,13 +24,13 @@
 #ifndef COMMON_H
 #define COMMON_H
 
+#include <assert.h>
+#include <float.h>
+#include <math.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <string.h>
-#include <assert.h>
-#include <math.h>
-#include <float.h>
 #include <string>
-#include <stdint.h>
 
 namespace CMP
 {
@@ -47,8 +47,6 @@ typedef unsigned int UINT;
 }
 
 #include "Compressonator.h"
-
-using namespace std;
 
 #define UNREFERENCED_PARAMETER(P)          ((void)P)
 

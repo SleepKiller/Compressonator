@@ -95,7 +95,7 @@ inline int NBits(int n, bool bIsSigned)
 
  int QuantizeToInt(short value, int prec, bool signedfloat16, float exposure)
  {
-     UNREFERENCED_PARAMETER(exposure);
+     CMP_UNREFERENCED_PARAMETER(exposure);
 
      if (prec <= 1) return 0;
      bool negvalue = false;
@@ -1635,7 +1635,7 @@ const float rampLerpWeights[5][16] =
 
 float rampf(int clog, int bits, float p1, float p2, int indexPos)
 {
-    UNREFERENCED_PARAMETER(bits);
+    CMP_UNREFERENCED_PARAMETER(bits);
     // (clog+ LOG_CL_BASE) starts from 2 to 4
     return  (float)p1 + rampLerpWeights[clog + LOG_CL_BASE][indexPos] * (p2 - p1);
 }

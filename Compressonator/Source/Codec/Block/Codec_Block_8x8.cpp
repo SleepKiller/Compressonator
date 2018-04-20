@@ -49,9 +49,9 @@ CCodecBuffer* CCodec_Block_8x8::CreateBuffer(
     CMP_BYTE nBlockWidth, CMP_BYTE nBlockHeight, CMP_BYTE nBlockDepth, 
     CMP_DWORD dwWidth, CMP_DWORD dwHeight, CMP_DWORD dwPitch, CMP_BYTE* pData) const
 {
-    UNREFERENCED_PARAMETER(nBlockWidth);
-    UNREFERENCED_PARAMETER(nBlockHeight);
-    UNREFERENCED_PARAMETER(nBlockDepth);
+    CMP_UNREFERENCED_PARAMETER(nBlockWidth);
+    CMP_UNREFERENCED_PARAMETER(nBlockHeight);
+    CMP_UNREFERENCED_PARAMETER(nBlockDepth);
 
     return CreateCodecBuffer(CBT_8x8Block_8BPP, 8,8,1, dwWidth, dwHeight, dwPitch, pData);
 }

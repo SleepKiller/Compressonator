@@ -48,7 +48,7 @@ typedef unsigned int UINT;
 
 #include "Compressonator.h"
 
-#define UNREFERENCED_PARAMETER(P)          ((void)P)
+#define CMP_UNREFERENCED_PARAMETER(P)          ((void)P)
 
 //#define USE_DBGTRACE                                //  Show messages via Win Debug
 //#define BC7_DEBUG_TO_RESULTS_TXT                    //  Send debug info to a results text file
